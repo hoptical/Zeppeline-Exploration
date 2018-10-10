@@ -1,0 +1,913 @@
+{
+  "paragraphs": [
+    {
+      "text": "%md\n## This is an introduction example to CAPS.",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-10 16:13:44.174",
+      "config": {
+        "tableHide": false,
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/markdown",
+        "fontSize": 9.0,
+        "editorHide": true,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eThis is an introduction example to CAPS.\u003c/h2\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1539160370404_-1044979761",
+      "id": "20181009-141743_252481446",
+      "dateCreated": "2018-10-10 12:02:50.404",
+      "dateStarted": "2018-10-10 16:13:44.205",
+      "dateFinished": "2018-10-10 16:13:44.209",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\nFirst we need to load CAPS dependency. This is done by z.load() command",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-10 16:13:44.305",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eFirst we need to load CAPS dependency. This is done by z.load() command\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1539174546847_-969495149",
+      "id": "20181010-155906_562363886",
+      "dateCreated": "2018-10-10 15:59:06.848",
+      "dateStarted": "2018-10-10 16:13:44.318",
+      "dateFinished": "2018-10-10 16:13:44.321",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%spark.dep\nz.load(\"org.opencypher:spark-cypher:0.2.0\")",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-10 16:15:49.518",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true,
+        "editorHide": false,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "res0: org.apache.zeppelin.dep.Dependency \u003d org.apache.zeppelin.dep.Dependency@6b2758dc\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1539160370405_1972362555",
+      "id": "20181009-161607_614536250",
+      "dateCreated": "2018-10-10 12:02:50.405",
+      "dateStarted": "2018-10-10 16:15:49.666",
+      "dateFinished": "2018-10-10 16:15:54.926",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\nNow we should import necessary packages",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-10 16:00:15.067",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eNow we should import necessary packages\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1539174586258_442604526",
+      "id": "20181010-155946_223186081",
+      "dateCreated": "2018-10-10 15:59:46.258",
+      "dateStarted": "2018-10-10 16:00:15.067",
+      "dateFinished": "2018-10-10 16:00:15.078",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "import java.net.URI\nimport org.opencypher.okapi.api.graph.{GraphName, Namespace, QualifiedGraphName}\nimport org.opencypher.okapi.neo4j.io.Neo4jConfig\nimport org.opencypher.spark.api.{CAPSSession, GraphSources}\nimport org.opencypher.spark.api.CAPSSession._\nimport org.opencypher.okapi.neo4j.io.MetaLabelSupport._\nimport org.opencypher.okapi.api.util.ZeppelinSupport._",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-10 16:16:00.411",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "import java.net.URI\nimport org.opencypher.okapi.api.graph.{GraphName, Namespace, QualifiedGraphName}\nimport org.opencypher.okapi.neo4j.io.Neo4jConfig\nimport org.opencypher.spark.api.{CAPSSession, GraphSources}\nimport org.opencypher.spark.api.CAPSSession._\nimport org.opencypher.okapi.neo4j.io.MetaLabelSupport._\nimport org.opencypher.okapi.api.util.ZeppelinSupport._\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1539174589623_-799090242",
+      "id": "20181010-155949_954403282",
+      "dateCreated": "2018-10-10 15:59:49.623",
+      "dateStarted": "2018-10-10 16:16:00.491",
+      "dateFinished": "2018-10-10 16:16:06.303",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\nFirst, We should create a CAPS session.\nThen neo4j congigues should be considered.\nAt last the graph which we want to run cypher on should be qualified on the catalog of caps",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-10 16:10:19.186",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003cp\u003eFirst, We should create a CAPS session.\u003cbr/\u003eThen neo4j congigues should be considered.\u003cbr/\u003eAt last the graph which we want to run cypher on should be qualified on the catalog of caps\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1539174641563_-1280850646",
+      "id": "20181010-160041_1455132421",
+      "dateCreated": "2018-10-10 16:00:41.563",
+      "dateStarted": "2018-10-10 16:10:19.186",
+      "dateFinished": "2018-10-10 16:10:19.205",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "// CAPS session creation. This value should be in implicit mode.\nimplicit val caps: CAPSSession \u003d CAPSSession.create(spark)\n\n// Neo4j configuraion. This is consists of Neo4j url and it\u0027s user and password.\nval neoConfig \u003d Neo4jConfig(uri\u003dURI.create(\"bolt://localhost:7687\"),\n    user\u003d\"neo4j\",\n    password\u003dSome(\"Mohammad109ExA\"))\n\n// We should create a namespace for our desired source.    \nval neo4jNamespace \u003d Namespace(\"hospital\")\n// Making neo4j source\nval neo4jSource \u003d GraphSources.cypher.neo4j(neoConfig)\n// caps session should register the source with the specified namespace\ncaps.registerSource(neo4jNamespace, neo4jSource)\n// at last, the graph which we wanna run cypher on it should be qualified on the catalog of caps\nval graph \u003d caps.catalog.graph(QualifiedGraphName(Namespace(\"hospital\"), entireGraphName))\n",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-10 16:16:20.060",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {
+          "1": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {
+                    "columns": [
+                      {
+                        "name": "_disease_type __ STRING?",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "_unstructured __ LIST? OF STRING",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "_name __ STRING",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "_fatality __ BOOLEAN?",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "_Disease __ BOOLEAN",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "_chapter __ STRING?",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "_aliases __ LIST? OF STRING",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "_system __ STRING?",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": " __ NODE(_Disease) @ session_tmp1",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "_book __ STRING?",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      },
+                      {
+                        "name": "_page __ STRING",
+                        "visible": true,
+                        "width": "*",
+                        "sort": {},
+                        "filters": [
+                          {}
+                        ],
+                        "pinned": ""
+                      }
+                    ],
+                    "scrollFocus": {},
+                    "selection": [],
+                    "grouping": {
+                      "grouping": [],
+                      "aggregations": [],
+                      "rowExpandedStates": {}
+                    },
+                    "treeView": {},
+                    "pagination": {
+                      "paginationCurrentPage": 1.0,
+                      "paginationPageSize": 250.0
+                    }
+                  },
+                  "tableColumnTypeState": {
+                    "names": {
+                      "_disease_type __ STRING?": "string",
+                      "_unstructured __ LIST? OF STRING": "string",
+                      "_name __ STRING": "string",
+                      "_fatality __ BOOLEAN?": "string",
+                      "_Disease __ BOOLEAN": "string",
+                      "_chapter __ STRING?": "string",
+                      "_aliases __ LIST? OF STRING": "string",
+                      "_system __ STRING?": "string",
+                      " __ NODE(_Disease) @ session_tmp1": "string",
+                      "_book __ STRING?": "string",
+                      "_page __ STRING": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                },
+                "lineChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "stackedAreaChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                },
+                "multiBarChart": {
+                  "rotate": {
+                    "degree": "-45"
+                  },
+                  "xLabelStatus": "default"
+                }
+              },
+              "commonSetting": {},
+              "keys": [
+                {
+                  "name": "_disease_type __ STRING?",
+                  "index": 0.0,
+                  "aggr": "sum"
+                }
+              ],
+              "groups": [],
+              "values": [
+                {
+                  "name": "_unstructured __ LIST? OF STRING",
+                  "index": 1.0,
+                  "aggr": "sum"
+                }
+              ]
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "caps: org.opencypher.spark.api.CAPSSession \u003d CAPSSession\nneoConfig: org.opencypher.okapi.neo4j.io.Neo4jConfig \u003d Neo4jConfig(bolt://localhost:7687,neo4j,Some(Mohammad109ExA),true)\nneo4jNamespace: org.opencypher.okapi.api.graph.Namespace \u003d hospital\nneo4jSource: org.opencypher.spark.api.io.neo4j.Neo4jPropertyGraphDataSource \u003d Neo4jPropertyGraphDataSource(Neo4jConfig(bolt://localhost:7687,neo4j,Some(Mohammad109ExA),true),None,false)\ngraph: org.opencypher.okapi.api.graph.PropertyGraph \u003d ScanGraph(NODE(:Sign), NODE(:Disease), RELATIONSHIP(:indicate))\n"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1539160370405_1830055708",
+      "id": "20181009-141803_1566924005",
+      "dateCreated": "2018-10-10 12:02:50.405",
+      "dateStarted": "2018-10-10 16:16:20.094",
+      "dateFinished": "2018-10-10 16:16:23.080",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n## Output",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-10 16:11:55.549",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch2\u003eOutput\u003c/h2\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1539175106607_372077691",
+      "id": "20181010-160826_800479155",
+      "dateCreated": "2018-10-10 16:08:26.607",
+      "dateStarted": "2018-10-10 16:11:55.550",
+      "dateFinished": "2018-10-10 16:11:55.555",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### 1. Records\nYou may see the output results as the records by calling .records",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-10 16:17:40.921",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": false,
+        "tableHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003e1. Records\u003c/h3\u003e\n\u003cp\u003eYou may see the output results as the records by calling .records\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1539175319247_2022193944",
+      "id": "20181010-161159_471306369",
+      "dateCreated": "2018-10-10 16:11:59.248",
+      "dateStarted": "2018-10-10 16:12:53.699",
+      "dateFinished": "2018-10-10 16:12:53.708",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "// Write cypher command\nval names \u003d graph.cypher(\"MATCH (n) RETURN n.name, labels(n)[0] as label limit 10\")\nval data_records \u003d names.records\ndata_records.show",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-10 16:19:22.714",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "1": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "_name __ STRING": "string",
+                      "_Disease __ BOOLEAN": "string",
+                      " __ NODE(_Disease) @ session_tmp1": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "names: org.opencypher.okapi.api.graph.CypherResult \u003d RelationalCypherResult(Some(Select(orderedFields\u003dList(n.name :: STRING, label :: STRING?), solved\u003dSolvedQueryModel(Set(n :: NODE @ session.tmp3, n.name :: STRING,   FRESHID36 :: STRING?, label :: STRING?),Set()))),Some(Select(expressions\u003dList(n.name :: STRING, label :: STRING?))))\ndata_records: org.opencypher.okapi.api.table.CypherRecords \u003d CAPSRecords(header: [`label`, `n.name`])\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://192.168.88.52:4040/jobs/job?id\u003d3"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1539160537177_-125314069",
+      "id": "20181010-120537_1102464606",
+      "dateCreated": "2018-10-10 12:05:37.177",
+      "dateStarted": "2018-10-10 16:19:22.729",
+      "dateFinished": "2018-10-10 16:19:23.873",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### 2. Dataframe\nYou may see the output results as the dataframe by calling .asDataFrame on the records",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-10 16:19:45.496",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": false,
+        "tableHide": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003e2. Dataframe\u003c/h3\u003e\n\u003cp\u003eYou may see the output results as the dataframe by calling .asDataFrame on the records\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1539175658934_-1553084194",
+      "id": "20181010-161738_1449070083",
+      "dateCreated": "2018-10-10 16:17:38.934",
+      "dateStarted": "2018-10-10 16:18:33.902",
+      "dateFinished": "2018-10-10 16:18:33.914",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val data_dataframe \u003d data_records.asDataFrame\nz.show(data_dataframe)\n",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-10 16:19:33.990",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {
+          "1": {
+            "graph": {
+              "mode": "table",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "_name __ STRING": "string",
+                      "labels(n)[$  AUTOINT0] __ STRING?": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            }
+          }
+        },
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "data_dataframe: org.apache.spark.sql.DataFrame \u003d [_name __ STRING: string, labels(n)[$  AUTOINT0] __ STRING?: string]\n"
+          },
+          {
+            "type": "TABLE",
+            "data": "_name __ STRING\tlabels(n)[$  AUTOINT0] __ STRING?\ncough\tSign\nacne\tDisease\npain\tDisease\n"
+          }
+        ]
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            "http://192.168.88.52:4040/jobs/job?id\u003d4",
+            "http://192.168.88.52:4040/jobs/job?id\u003d5"
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "apps": [],
+      "jobName": "paragraph_1539175683282_1558626365",
+      "id": "20181010-161803_324367525",
+      "dateCreated": "2018-10-10 16:18:03.282",
+      "dateStarted": "2018-10-10 16:19:32.941",
+      "dateFinished": "2018-10-10 16:19:33.452",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%md\n### 3. Graph\nYou may see the output results as the graph by calling .graph. \nThis graph can be cyphered later and do any thing you want.",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-10 16:20:42.116",
+      "config": {
+        "colWidth": 12.0,
+        "fontSize": 9.0,
+        "enabled": true,
+        "results": {},
+        "editorSetting": {
+          "language": "markdown",
+          "editOnDblClick": true,
+          "completionKey": "TAB",
+          "completionSupport": false
+        },
+        "editorMode": "ace/mode/markdown",
+        "editorHide": true,
+        "tableHide": false
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv class\u003d\"markdown-body\"\u003e\n\u003ch3\u003e3. Graph\u003c/h3\u003e\n\u003cp\u003eYou may see the output results as the graph by calling .graph.\u003cbr/\u003eThis graph can be cyphered later and do any thing you want.\u003c/p\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1539175783969_956663217",
+      "id": "20181010-161943_518917390",
+      "dateCreated": "2018-10-10 16:19:43.969",
+      "dateStarted": "2018-10-10 16:20:42.116",
+      "dateFinished": "2018-10-10 16:20:42.125",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "val myGraph \u003d graph.cypher(\n    s\"\"\"MATCH (n:Disease {name:\"acne\"})\u003c-[r]-(m:Disease)\n    |MATCH (o:Sign {name:\"cough\"})\n    |CONSTRUCT\n    |  CREATE (m)-[COPY OF r]-\u003e(o) \n    |RETURN GRAPH\"\"\".stripMargin).graph\n// show the graph\nmyGraph.printGraph",
+      "user": "anonymous",
+      "dateUpdated": "2018-10-10 16:23:43.092",
+      "config": {
+        "editorSetting": {
+          "language": "scala",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/scala",
+        "fontSize": 9.0,
+        "results": {
+          "1": {
+            "graph": {
+              "mode": "network",
+              "height": 300.0,
+              "optionOpen": false,
+              "setting": {
+                "table": {
+                  "tableGridState": {},
+                  "tableColumnTypeState": {
+                    "names": {
+                      "id": "string",
+                      "label": "string"
+                    },
+                    "updated": false
+                  },
+                  "tableOptionSpecHash": "[{\"name\":\"useFilter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable filter for columns\"},{\"name\":\"showPagination\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable pagination for better navigation\"},{\"name\":\"showAggregationFooter\",\"valueType\":\"boolean\",\"defaultValue\":false,\"widget\":\"checkbox\",\"description\":\"Enable a footer for displaying aggregated values\"}]",
+                  "tableOptionValue": {
+                    "useFilter": false,
+                    "showPagination": false,
+                    "showAggregationFooter": false
+                  },
+                  "updated": false,
+                  "initialized": false
+                }
+              },
+              "commonSetting": {}
+            },
+            "helium": {}
+          }
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "myGraph: org.opencypher.okapi.api.graph.CypherResult#Graph \u003d UnionGraph(graphs\u003d[org.opencypher.okapi.relational.impl.graph.SingleTableGraph@537d9f53 -\u003e Map(1 -\u003e 1, 0 -\u003e 0)])\n\n"
+          },
+          {
+            "type": "NETWORK",
+            "data": "{\n  \"directed\": true,\n  \"labels\": {\n    \"Disease\": \"#b29fc4\",\n    \"Sign\": \"#fef5da\"\n  },\n  \"nodes\": [\n    {\n      \"id\": \"1830\",\n      \"label\": \"Disease\",\n      \"labels\": [\n        \"Disease\"\n      ],\n      \"data\": {\n        \"name\": \"pain\"\n      }\n    },\n    {\n      \"id\": \"762\",\n      \"label\": \"Sign\",\n      \"labels\": [\n        \"Sign\"\n      ],\n      \"data\": {\n        \"name\": \"cough\"\n      }\n    }\n  ],\n  \"edges\": [\n    {\n      \"id\": \"18015085704249344\",\n      \"source\": \"1830\",\n      \"target\": \"762\",\n      \"label\": \"indicate\",\n      \"data\": {\n        \n      }\n    }\n  ],\n  \"types\": [\n    \"indicate\"\n  ]\n}\n        "
+          }
+        ]
+      },
+      "apps": [],
+      "jobName": "paragraph_1539160370407_1704832329",
+      "id": "20181009-173751_671759525",
+      "dateCreated": "2018-10-10 12:02:50.407",
+      "dateStarted": "2018-10-10 14:28:04.401",
+      "dateFinished": "2018-10-10 14:28:24.531",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "user": "anonymous",
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "jobName": "paragraph_1539168755813_-1975797790",
+      "id": "20181010-142235_911561182",
+      "dateCreated": "2018-10-10 14:22:35.813",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "/CAPS/Introduction",
+  "id": "2DS7QSQJQ",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {
+    "md:shared_process": [],
+    "spark:shared_process": []
+  },
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {}
+}
